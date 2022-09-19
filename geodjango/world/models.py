@@ -30,8 +30,8 @@ class WorldBorder(models.Model):
     # """ Geometry field"""
     # mpoly = models.MultiPolygonField(null=True)
     #
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
 
     geom = models.MultiPolygonField(srid=4326,
                                     null=True)
