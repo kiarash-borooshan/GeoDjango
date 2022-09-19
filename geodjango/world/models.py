@@ -27,8 +27,27 @@ class WorldBorder(models.Model):
     lon = models.FloatField(null=True)
     lat = models.FloatField(null=True)
 
-    """ Geometry field"""
-    mpoly = models.MultiPolygonField(null=True)
+    # """ Geometry field"""
+    # mpoly = models.MultiPolygonField(null=True)
+    #
+    # def __str__(self):
+    #     return self.name
 
-    def __str__(self):
-        return self.name
+    geom = models.MultiPolygonField(srid=4326,
+                                    null=True)
+
+    """ Auto-generated LayerMapping dictionary for worldBordr model"""
+    worldborder_mapping = {
+        "fips": "FIPS",
+        "iso2": "ISO2",
+        "iso3": "ISO3",
+        "un": "UN",
+        "name": "NAME",
+        "area": "AREA",
+        "pop2005": "POP2005",
+        "region": "REGION",
+        "subregion": "SUBREGION",
+        "lon": "LON",
+        "lat": "LAT",
+        "geom": "MULTIPOLYGON",
+    }
