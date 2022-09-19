@@ -17,7 +17,8 @@ world_mapping = {
     "mpoly": "MULTIPOLYGON",
 }
 
-world_shap = Path(__file__).resolve().parent/"data"/"TM_WORLD_BORDERS-0.3.SHP"
+world_shap = Path(__file__).resolve().parent/"data"/"TM_WORLD_BORDERS-0.3.shp"
+# world_shap = Path(__file__).resolve().parent / 'data' / 'TM_WORLD_BORDERS-0.3.shp'
 
 
 def run(verbose=True):
